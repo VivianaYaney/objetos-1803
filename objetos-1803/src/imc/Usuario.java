@@ -28,5 +28,16 @@ public class Usuario {
     public void setAltura(float altura) {
         this.altura = altura;
     }
+
+    void getAltura(float parseFloat) {
+    }
+
+    void getPeso(float parseFloat) {
+       
+    }
+
+    String masa() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

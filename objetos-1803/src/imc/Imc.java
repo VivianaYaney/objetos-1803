@@ -24,5 +24,8 @@ public class Imc {
     public void setUsuario(Usuario usuario) {
         this.usuario= usuario;
     }
+
+    void getUsuario(Usuario u) {
+    }
     
 }

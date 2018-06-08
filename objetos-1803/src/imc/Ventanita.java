@@ -107,8 +107,13 @@ public class Ventanita extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Usuario u= new Usuario();
+        u.setAltura(Float.parseFloat(jTextField2.getText()));
+        u.setPeso(Float.parseFloat(jTextField1.getText()));
         
-        
+        Imc i= new Imc();
+        i.setUsuario(u);
+        jLabel4.setText(""+i.masa());
+     
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
