@@ -34,6 +34,7 @@ public class Ventanita extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,7 +51,9 @@ public class Ventanita extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Resultado");
+        jLabel4.setText("IMC");
+
+        jLabel5.setText("RESULTADO");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,7 +81,10 @@ public class Ventanita extends javax.swing.JFrame {
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(180, 180, 180)
-                        .addComponent(jLabel4)))
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -98,7 +104,9 @@ public class Ventanita extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
@@ -114,6 +122,15 @@ public class Ventanita extends javax.swing.JFrame {
         i.setUsuario(u);
         jLabel4.setText(""+i.masa());
      
+        if(i.masa()>=0 & i.masa()<20){
+            jLabel5.setText("Bajo peso, posibilidad de anemia");
+        }
+        else if(i.masa()>=20 & i.masa()<25){
+            jLabel5.setText("Peso ideal, normal");
+    }
+        else if(i.masa()>25){
+            jLabel5.setText("Sobrepeso");
+    }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -158,6 +175,7 @@ public class Ventanita extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
