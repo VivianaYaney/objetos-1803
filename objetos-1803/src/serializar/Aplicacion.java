@@ -11,14 +11,20 @@ package serializar;
  */
 public class Aplicacion {
     public static void main(String[] args) throws Exception {
-    
-        //Pues a usar nuestro modelo
-        Cliente c= new Cliente();
-        c.setEdad(20);
-        c.setNombre("Viviana Benitez");
-        c.setSueldo(5000);
         
-       PersistenciaUsuario.guardar(c);
-        System.out.println("Guardado con exito!!");
+       for(Cliente c:PersistenciaUsuario.leer()){
+        
+        System.out.println("Nombre "+c.getNombre()+" Edad "+c.getEdad());
+        
     }
+    
+      /*Cliente c=PersistenciaUsuario.leer();
+        //System.out.println("Vamos a checar el nombre "+c.getNombre());
+        Cliente c=new Cliente();
+        c.setNombre("Antonio");
+        c.setEdad(31);
+        PersistenciaUsuario.guardar(c);
+*/
+    }
+    
 }
