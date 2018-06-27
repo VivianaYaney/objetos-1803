@@ -15,13 +15,13 @@ public class GeneradorTarjetas {
         private ArrayList<Cliente> clientes;
 
         public GeneradorTarjetas(){
-            clientes =new ArrayList<>();
-           clientes.add(new Cliente("Juan", new Tarjeta(1234, "Banamex", 3200)));
-           
+            clientes=new ArrayList<>();
+            clientes.add(new Cliente("Juan", new Tarjeta(1234, "Banamex", 32000)));
+            clientes.add(new Cliente("Juan", new Tarjeta(5678,"HSBC", 17500)));
+            
             
             
         }
-
     public ArrayList<Cliente> getClientes() {
         return clientes;
     }
@@ -29,6 +29,4 @@ public class GeneradorTarjetas {
     public void setClientes(ArrayList<Cliente> clientes) {
         this.clientes = clientes;
     }
-        
-    
 }
