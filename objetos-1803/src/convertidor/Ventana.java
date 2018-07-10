@@ -25,8 +25,7 @@ public class Ventana extends javax.swing.JFrame {
         initComponents();
  
         //Cambiamos el Modelo
-        jComboBox1.setModel(modelo); 
-        
+       
     }
 
     /**
