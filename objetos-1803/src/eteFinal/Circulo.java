@@ -9,19 +9,35 @@ package eteFinal;
  *
  * @author T-101
  */
-public abstract class Circulo {
-    private float ra;
+public abstract class Circulo extends Figura{
 
-    public Circulo(float ra) {
-        this.ra = ra;
+     private float radio;
+
+    public float getRadio() {
+        return radio;
     }
 
-    public float getRa() {
-        return ra;
+    public void setRadio(float radio) {
+        this.radio = radio;
     }
 
-    public void setRa(float ra) {
-        this.ra = ra;
+    public Circulo() {
     }
-    
+
+    public Circulo(float radio) {
+        this.radio = radio;
+    }
+
+    @Override
+    public void Perimetro() {
+        radio=getRadio();
+        System.out.println("El Perimetro del circulo es: " + 3.1416 * 2 * radio);
+    }
+
+    @Override
+    public void Area() {
+        radio = getRadio();
+       
+        System.out.println("El Area del circulo es: " + 3.1416 * radio * radio);
+    }
 }

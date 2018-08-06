@@ -9,22 +9,25 @@ package eteFinal;
  *
  * @author T-101
  */
-public abstract class Triangulo {
+public abstract class Triangulo extends Figura{
     
-    private float base;
-    private float altura;
+    float lado;
+    float altura;
 
-    public Triangulo(float base, float altura) {
-        this.base = base;
+    public Triangulo(float lado, float altura) {
+        this.lado = lado;
         this.altura = altura;
     }
 
-    public float getBase() {
-        return base;
+    public Triangulo() {
     }
 
-    public void setBase(float base) {
-        this.base = base;
+    public float getLado() {
+        return lado;
+    }
+
+    public void setLado(float lado) {
+        this.lado = lado;
     }
 
     public float getAltura() {
@@ -34,5 +37,19 @@ public abstract class Triangulo {
     public void setAltura(float altura) {
         this.altura = altura;
     }
-    
+
+    @Override
+    public void Perimetro() {
+        lado = getLado();
+        System.out.println("El Perimetro del triangulo es: " + 3 * lado);
+    }
+
+    @Override
+    public void Area() {
+        lado = getLado();
+        altura = getAltura();
+        System.out.println("El Area del triangulo es: " + lado * altura / 2);
+    }
+
+
 }

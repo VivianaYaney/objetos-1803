@@ -9,7 +9,8 @@ package eteFinal;
  *
  * @author T-101
  */
-public abstract class Cuadrado  {
+public abstract class Cuadrado extends Figura{
+
     private float lado;
 
     public float getLado() {
@@ -20,8 +21,21 @@ public abstract class Cuadrado  {
         this.lado = lado;
     }
 
+    public Cuadrado() {
+    }
+
     public Cuadrado(float lado) {
         this.lado = lado;
     }
-   
+@Override
+    public void Perimetro() {
+        lado = getLado();
+        System.out.println("El Perimetro del cuadrado es: " + 4 * lado);
+    }
+
+    @Override
+    public void Area() {
+        lado = getLado();
+        System.out.println("El Area del cuadrado es: " + lado * lado);
+    }
 }
